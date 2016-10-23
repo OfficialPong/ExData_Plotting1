@@ -34,10 +34,13 @@ loadData <- function()
 }
 
 
-# Plots a line plot of datetime against Global Active Power for a dataframe
-# passed in. Outputs to a file named plot2.png.
-plot2 <- function(data)
+# Plots a line plot of datetime against Global Active Power
+# Outputs to a file named plot2.png.
+plot2 <- function()
 {
+  # load data from disk
+  data<-loadData()
+  
   # set up graphic device
   png(filename="plot2.png",width=480,height=480,units="px")
   

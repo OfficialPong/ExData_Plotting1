@@ -39,8 +39,11 @@ loadData <- function()
 # 2) datetime vs. Voltage
 # 3) datetime vs. Energy sub metering
 # 4) datetime vs Global reactive power
-plot4 <- function(data)
+plot4 <- function()
 {
+  # load data from disk
+  data<-loadData()
+  
   # set up graphic device
   png(filename="plot4.png",width=480,height=480,units="px")
   

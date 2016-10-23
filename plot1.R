@@ -33,10 +33,13 @@ loadData <- function()
   data
 }
 
-# Plots a histogram of Global Active Power vs. Frequency for a dataframe
-# passed in. Outputs to a file named plot1.png.
-plot1 <- function(data)
+# Plots a histogram of Global Active Power vs. Frequency
+# Outputs to a file named plot1.png.
+plot1 <- function()
 {
+  # load data from disk
+  data<-loadData()
+  
   # set up graphic device
   png(filename="plot1.png",width=480,height=480,units="px")
   

@@ -39,8 +39,11 @@ loadData <- function()
 # Red = sub_metering_2
 # Blue = sub_metering_3
 # Outputs to a file named plot3.png
-plot3 <- function(data)
+plot3 <- function()
 {
+  # load data from disk
+  data<-loadData()
+  
   # set up graphic device
   png(filename="plot3.png",width=480,height=480,units="px")
   
